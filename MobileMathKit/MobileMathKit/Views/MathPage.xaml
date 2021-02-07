@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileMathKit.Views.MathPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:MobileMathKit.ViewModels"  
+             xmlns:model="clr-namespace:MobileMathKit.Models"  
+             x:Name="MathContentPage">
+
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="5,5,5,5">
+        <Label Text="Cx"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+        <Entry x:Name="CxEntry"
+                Placeholder="Enter your CX"
+                Keyboard="Numeric"
+                HeightRequest="100" />
+        <Label Text="A (in sqare meters)"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+        <Entry x:Name="AreaEntry"
+                Placeholder="Enter your Area"
+                Keyboard="Numeric"
+                HeightRequest="100" />
+        <Label Text="v (in meters per second)"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+        <Entry x:Name="vEntry"
+                Placeholder="Enter your speed"
+                Keyboard="Numeric"
+                HeightRequest="100" />
+        <Button Text="Calculate" Clicked="Button_Clicked" />
+        <Entry x:Name="ResultEntry"
+                Placeholder=""
+                IsReadOnly="True"
+                InputTransparent = "True"
+                HeightRequest="100" />
+    </StackLayout>
+</ContentPage>
